@@ -17,12 +17,18 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
         
-        /**
-         
-         * Manually test your classes here.
-         
-         */
-        
+        print("")
+        let skateboard = Vehicle(name: "skateboard", weight: 7.5, maxSpeed: 20.0)
+        print("skateboard speed: \(skateboard.speed)")
+        skateboard.gofast()
+        print("skateboard speed: \(skateboard.speed)")
+        print("")
+        let cessna172 = Plane(name: "Cessna 172", weight: 2550, maxSpeed: 188, maxAltitude: 13500)
+        print("cessna172 altitude before takeoff: \(cessna172.altitude)")
+        cessna172.takeOff()
+        print("cessna172 altitude after takeoff: \(cessna172.altitude)")
+        print("")
+    
         // Do not alter
         return true  //
     }   //////////////
